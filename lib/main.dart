@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ThemeData()
               .colorScheme
               .copyWith(primary: ThemeColor.primaryDark)),
-      home: AgentsPage(),
+      home: const AgentsPage(),
       initialBinding: AgentsBinding(),
       getPages: AppPages.pages,
     );
