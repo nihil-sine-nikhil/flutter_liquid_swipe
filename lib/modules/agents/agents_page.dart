@@ -32,17 +32,17 @@ class AgentsPage extends StatelessWidget {
                     color: agentsController.bgColors[index],
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 32,
                         ),
                         Text(
                           "${agentsController.allAgents[index].displayName?.toUpperCase()}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: ThemeColor.white,
                               fontSize: 32,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 16,
                         ),
                         Expanded(
@@ -71,7 +71,7 @@ class AgentsPage extends StatelessWidget {
                                       .allAgents[index].fullPortrait ??
                                   ""),
                         ])),
-                        SizedBox(
+                        const SizedBox(
                           height: 100,
                         ),
                       ],
@@ -82,7 +82,7 @@ class AgentsPage extends StatelessWidget {
                   agentsController.activeIndex.value = value;
                   agentsController.tabController?.animateTo(
                     value,
-                    duration: Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 500),
                     curve: Curves.ease,
                   );
                 },
@@ -108,7 +108,7 @@ class AgentsPage extends StatelessWidget {
                               borderWidth: 4,
                               unselectedBorderColor: Colors.transparent,
                               buttonMargin:
-                                  EdgeInsets.symmetric(horizontal: 28),
+                                  const EdgeInsets.symmetric(horizontal: 28),
                               tabs: agentsController.allAgents
                                   .mapIndexed((pos, item) {
                                 return Tab(
@@ -139,7 +139,7 @@ class AgentsPage extends StatelessWidget {
                                 agentsController.activeIndex.value = index;
                                 agentsController.tabController?.animateTo(
                                   index,
-                                  duration: Duration(milliseconds: 500),
+                                  duration: const Duration(milliseconds: 500),
                                   curve: Curves.ease,
                                 );
                                 agentsController.liquidController
@@ -149,7 +149,7 @@ class AgentsPage extends StatelessWidget {
                           ],
                         )),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                 ],
